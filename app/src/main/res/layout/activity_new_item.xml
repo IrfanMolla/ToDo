@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.irfanmolla.todo.NewItem"
+    android:background="@color/background2"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarNewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back"/>
+
+            <ImageButton
+                android:id="@+id/button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/success" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv-title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp"
+
+                android:text="Title"
+                android:textColor="@color/Text"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/titleCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv-title"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    app:cardCornerRadius="5dp">
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/tv-title"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:gravity="top|left"
+                        android:hint="eg.:Pay electricity bill"
+                        android:textColor="@color/Text" />
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv-title"
+                android:layout_below="@+id/titleCV"
+                android:layout_marginTop="15dp"
+                android:text="date"
+                android:textColor="@color/Text"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toEndOf="@+id/tv-title"
+                android:textColor="@color/Text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText3"
+                android:layout_alignBottom="@+id/editText3"
+                android:layout_marginStart="35dp"
+                android:layout_toEndOf="@+id/editText2"
+                android:text="Time"
+                android:textColor="@color/Text"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/editText2"
+                android:layout_alignBottom="@+id/editText2"
+                android:layout_toEndOf="@+id/textView3"
+                android:textColor="@color/Text"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv-title"
+                android:layout_below="@+id/titleCV"
+                android:layout_marginTop="5dp"
+                android:text="Note"
+                android:textColor="@color/Text"
+                android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/noteCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView4"
+                android:gravity="center">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    app:cardCornerRadius="5dp">
+
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/textView4"
+                        android:layout_toEndOf="@+id/textView2"
+                        android:background="@android:color/transparent"
+                        android:ems="20"
+                        android:gravity="top|left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:hint="eg.: Last day of bill payment!"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/Text" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteCV"
+                android:layout_marginTop="23dp"
+                android:layout_toEndOf="@+id/textView2"
+                android:gravity="center">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <android.support.v4.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get notified on time"
+                            android:textColor="@color/Text"
+                            android:buttonTint="@color/Text"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get notified before time"
+                            android:textColor="@color/Text"
+                            android:buttonTint="@color/Text"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Don't get notified"
+                            android:textColor="@color/Text"
+                            android:buttonTint="@color/Text"/>
+
+
+                    </RadioGroup>
+                        </android.support.v4.widget.NestedScrollView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background1"
+
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/cv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/setDate"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background2">
+
+                        <TextView
+                            android:id="@+id/Sdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Set date"
+                            android:textColor="@color/Text" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/cv1"
+                android:padding="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/setTime"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:layout_toEndOf="@id/cv1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background2">
+
+                        <TextView
+                            android:id="@+id/Stime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Set Time"
+                            android:textColor="@color/Text" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+            </RelativeLayout>
+                </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+
+
